@@ -1,0 +1,612 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="pdf:PDFVersion" content="1.5"/>
+<meta name="xmp:CreatorTool" content="LaTeX with hyperref"/>
+<meta name="pdf:hasXFA" content="false"/>
+<meta name="access_permission:modify_annotations" content="true"/>
+<meta name="access_permission:can_print_degraded" content="true"/>
+<meta name="dcterms:created" content="2020-04-14T07:35:51Z"/>
+<meta name="dcterms:modified" content="2020-04-14T07:35:51Z"/>
+<meta name="dc:format" content="application/pdf; version=1.5"/>
+<meta name="pdf:docinfo:creator_tool" content="LaTeX with hyperref"/>
+<meta name="access_permission:fill_in_form" content="true"/>
+<meta name="pdf:docinfo:modified" content="2020-04-14T07:35:51Z"/>
+<meta name="pdf:hasCollection" content="false"/>
+<meta name="pdf:encrypted" content="false"/>
+<meta name="pdf:docinfo:custom:PTEX.Fullbanner" content="This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) kpathsea version 6.3.1"/>
+<meta name="Content-Length" content="935450"/>
+<meta name="pdf:hasMarkedContent" content="false"/>
+<meta name="Content-Type" content="application/pdf"/>
+<meta name="PTEX.Fullbanner" content="This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) kpathsea version 6.3.1"/>
+<meta name="pdf:producer" content="pdfTeX-1.40.20"/>
+<meta name="access_permission:extract_for_accessibility" content="true"/>
+<meta name="access_permission:assemble_document" content="true"/>
+<meta name="xmpTPg:NPages" content="28"/>
+<meta name="resourceName" content="Exemple-etude-technique.pdf"/>
+<meta name="pdf:hasXMP" content="false"/>
+<meta name="access_permission:extract_content" content="true"/>
+<meta name="access_permission:can_print" content="true"/>
+<meta name="pdf:docinfo:trapped" content="False"/>
+<meta name="X-TIKA:Parsed-By" content="org.apache.tika.parser.DefaultParser"/>
+<meta name="X-TIKA:Parsed-By" content="org.apache.tika.parser.pdf.PDFParser"/>
+<meta name="access_permission:can_modify" content="true"/>
+<meta name="pdf:docinfo:producer" content="pdfTeX-1.40.20"/>
+<meta name="pdf:docinfo:created" content="2020-04-14T07:35:51Z"/>
+<title></title>
+</head>
+<body><div class="page"><p/>
+<p>Table des mati&egrave;res
+</p>
+<p>Table des figures 2
+</p>
+<p>1 Architecture Globale 4
+</p>
+<p>2 Architecture d&eacute;taill&eacute;e 7
+2.1 Partie client . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+</p>
+<p>2.1.1 Architecture int&eacute;rieur React Native . . . . . . . . . . . . . . 7
+2.1.2 Structure D&eacute;taill&eacute;e de la partie front . . . . . . . . . . . . 8
+</p>
+<p>2.2 Partie serveur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+2.2.1 Architecture int&eacute;rieur Nest js . . . . . . . . . . . . . . . . . 13
+2.2.2 Structure D&eacute;taill&eacute;e de la partie back . . . . . . . . . . . . . 14
+2.2.3 Diagramme de classe . . . . . . . . . . . . . . . . . . . . . . 19
+2.2.4 Module temps r&eacute;el . . . . . . . . . . . . . . . . . . . . . . . 19
+2.2.5 Module traduction . . . . . . . . . . . . . . . . . . . . . . . 20
+</p>
+<p>2.3 Partie donn&eacute;es . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+2.3.1 Outil de gestion . . . . . . . . . . . . . . . . . . . . . . . . . 22
+2.3.2 Diagramme de base de donn&eacute;es . . . . . . . . . . . . . . . . 22
+</p>
+<p>1</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>Table des figures
+</p>
+<p>1.1 Architecture globale de l&rsquo;application . . . . . . . . . . . . . . . . . 4
+1.2 Logo de React . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+1.3 Logo de Nest JS . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+1.4 REST API . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+1.5 Logo de GrapheQl . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+</p>
+<p>2.1 Diagramme de classe . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+2.2 Le mod&egrave;le non bloquant de Node JS . . . . . . . . . . . . . . . . . 20
+2.3 Diagramme de base de donn&eacute;es . . . . . . . . . . . . . . . . . . . . 22
+2.4 Example de structure de donn&eacute;es . . . . . . . . . . . . . . . . . . . 23
+</p>
+<p>2</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>Introduction g&eacute;n&eacute;rale
+</p>
+<p>Apr&egrave;s avoir faire l&rsquo;&eacute;tude fonctionnelle on entame l&rsquo;&eacute;tude technique dans laquelle
+on va d&eacute;crire l&rsquo;architecture de l&rsquo;application et les technologies &agrave; utiliser.
+C&rsquo;est une phase tr&egrave;s importante qui compl&egrave;te le cahier des charges et l&rsquo;&eacute;tude
+fonctionnelle pour avoir une vision claire sur l&rsquo;application sur tout les vol&eacute;s.
+A la fin de cette phase, la premi&egrave;re partie de projet (pr&eacute;paration) sera pr&ecirc;te et on
+peut facilement commencer la partie de r&eacute;alisation suivant les normes qu&rsquo;on a d&eacute;j&agrave;
+mis dans les trois documents de la la partie de pr&eacute;paration.
+</p>
+<p>3</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>Chapitre 1
+</p>
+<p>Architecture Globale
+</p>
+<p>Apr&egrave;s avoir choisit les technologies n&eacute;cessaires pour le bon fonctionnement de
+l&rsquo;application et avant de passer &agrave; la partie d&eacute;veloppement, nous allons entamer
+l&rsquo;architecture globale de projet ainsi que les diff&eacute;rents modules existants dans
+l&rsquo;application. Notre application sera divis&eacute;e en deux parties, une partie front mobile
+en React native et une partie back en Nest JS .
+</p>
+<p>Figure 1.1 &ndash; Architecture globale de l&rsquo;application
+</p>
+<p>4</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 1. ARCHITECTURE GLOBALE
+- La partie front (client) de l&rsquo;application sera developp&eacute;e en React Native qui est
+</p>
+<p>un framework mobile open source cr&eacute;&eacute; par Facebook. Il est utilis&eacute; pour d&eacute;velopper
+des applications pour Android, iOS, Web et UWP en permettant aux d&eacute;veloppeurs
+d&rsquo;utiliser React avec les capacit&eacute;s de la plateforme native . * plus de d&eacute;tails sur
+cette technologie dans la partie annexe
+</p>
+<p>Figure 1.2 &ndash; Logo de React
+</p>
+<p>- La partie Back de l&rsquo;application sera travaill&eacute;e avec Nest.js qui est un framework
+Node.js c&ocirc;t&eacute; serveur pour cr&eacute;er des applications efficaces, fiables et &eacute;volutives .
+Fortement inspir&eacute; par Angular, Il fournit aux applications dorsales une structure
+modulaire pour organiser le code en modules s&eacute;par&eacute;s. * plus de d&eacute;tails sur
+cette technologie dans la partie annexe
+</p>
+<p>Figure 1.3 &ndash; Logo de Nest JS
+</p>
+<p>- Api rest (Representational state transfer) est un style architectural logiciel
+qui d&eacute;finit un ensemble de contraintes &agrave; utiliser pour cr&eacute;er des services Web. Les
+services Web conformes au style architectural REST, appel&eacute;s services Web RESTful,
+assurent l&rsquo;interop&eacute;rabilit&eacute; entre les syst&egrave;mes informatiques sur Internet. * plus
+de d&eacute;tails sur cette technologie dans la partie annexe
+</p>
+<p>5</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 1. ARCHITECTURE GLOBALE
+</p>
+<p>Figure 1.4 &ndash; REST API
+</p>
+<p>- GraphQL est un langage de requ&ecirc;te et de manipulation de donn&eacute;es open
+source pour les API, et un runtime pour r&eacute;pondre aux requ&ecirc;tes avec des donn&eacute;es
+existantes. * plus de d&eacute;tails sur cette technologie dans la partie annexe
+</p>
+<p>Figure 1.5 &ndash; Logo de GrapheQl
+</p>
+<p>- La partie communication est la phase reliante entre le front et le back suivant
+des requ&ecirc;tes http avec des r&eacute;ponses Json selon le protocole http (JWT) , pour
+assurer un &eacute;change en temps r&eacute;el les web socket s&rsquo;int&eacute;gre dans cette partie en
+respectant le protocole http. * plus de d&eacute;tails sur cette technologie dans la
+partie annexe
+</p>
+<p>6</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>Chapitre 2
+</p>
+<p>Architecture d&eacute;taill&eacute;e
+</p>
+<p>2.1 Partie client
+</p>
+<p>2.1.1 Architecture int&eacute;rieur React Native
+la diff&eacute;rence la plus apparente entre le d&eacute;veloppement d&rsquo;une application en-
+</p>
+<p>ti&egrave;rement native et une application RN est l&rsquo; architecture. Ici on va pr&eacute;senter
+l&rsquo;architecture de RN avec l&rsquo;utilisation du conteneur d&rsquo;&eacute;tat REDUX.
+</p>
+<p>7</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>2.1.2 Structure D&eacute;taill&eacute;e de la partie front
+Dans cette partie on va d&eacute;tailler l&rsquo;architecture de projet en pr&eacute;sentant l&rsquo;arbo-
+</p>
+<p>rescence de chaque dossier avec un Zoom sur chaque dossier .
+</p>
+<p>- Les composants du dossier de projet
+</p>
+<p>&bull; Assets : contient les icones et les images.
+</p>
+<p>8</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>&bull; Native-Th&eacute;me : contient les fichiers qui contr&ocirc;lent les couleurs et les styles de
+l&rsquo;application
+</p>
+<p>&bull; Fichiers Config : Les fichiers de configurations tel que package.json et
+babel.config.json
+</p>
+<p>9</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>&bull; Src : c&rsquo;est le dossier qui contient les composants les plus importants de
+l&rsquo;application
+</p>
+<p>10</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>&bull; Components : C&rsquo;est l&agrave; que nous placerons tous nos composants React partag&eacute;s.
+Habituellement, ces composants sont ceux que nous appelons &laquo;dummy&raquo;,
+qui n&rsquo;ont pas de logique d&rsquo;&eacute;tats et peuvent &ecirc;tre facilement r&eacute;utilis&eacute;s dans
+l&rsquo;application.
+</p>
+<p>&bull; Services : Ce sont les fonctions qui encapsulent les appels d&rsquo;API.
+</p>
+<p>&bull; Screens : Ce sont nos &eacute;crans d&rsquo;application, ceux que nous naviguons de l&rsquo;un
+&agrave; l&rsquo;autre. Ce sont aussi des composants React, mais ce sont ceux que nous
+appelons des conteneurs, car ils contiennent leur propre &eacute;tat.
+</p>
+<p>&bull; Navigation : La gestion de navigations entre les screens &agrave; l&rsquo;aide d&rsquo;une d&eacute;com-
+position modulaire sous forme des stack
+</p>
+<p>11</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>Les dossiers relatifs &agrave; Redux :
+</p>
+<p>&bull; Actions :les actions sont des &eacute;v&eacute;nements. Ils sont le seul moyen d&rsquo;envoyer des
+donn&eacute;es de votre application vers notre store Redux.
+</p>
+<p>&bull; Reducers :Les r&eacute;ducteurs sont de simples fonctions qui prennent l&rsquo;&eacute;tat actuel
+d&rsquo;une application, effectuent une action et renvoient un nouvel &eacute;tat
+</p>
+<p>&bull; Store : C&rsquo;est le magasin qui contient l&rsquo;&eacute;tat de l&rsquo;application.
+</p>
+<p>12</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>2.2 Partie serveur
+</p>
+<p>2.2.1 Architecture int&eacute;rieur Nest js
+</p>
+<p>13</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>2.2.2 Structure D&eacute;taill&eacute;e de la partie back
+Dans cette partie on va d&eacute;tailler l&rsquo;architecture de projet en pr&eacute;sentant l&rsquo;arbo-
+</p>
+<p>rescence de chaque dossier avec un Zoom sur chaque dossier .
+</p>
+<p>&bull; Fichiers Config :
+Ce dossier contient les fichiers de configurations tel que Package.json ,
+yarn.lock et nodemon.json
+</p>
+<p>14</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>&bull; Test :
+ce doddier contient les fichiers de test .Spec
+</p>
+<p>&bull; Src :
+Src est le dossier principales de l&rsquo;application qui encapsule tous les dossiers
+assurant le bon fonctionnement de la partie Back
+</p>
+<p>15</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>&bull; Common : ce dossier contient tous les sous-dossiers communs pour tous les
+modules et qu&rsquo;on peut les utiliser pour toute l&rsquo;application telque les services
+,les exceptions et les erreurs
+</p>
+<p>&bull; fixtures : dans le dossiers fixtures on contr&ocirc;le nos composants cr&eacute;es ( dans
+notre cas user et message )
+</p>
+<p>16</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>&bull; Message / user : ce sont nos modules cr&eacute;es dont chacun poss&egrave;dent des
+sous-dossiers pour assurer son comportement dans le processus de nest js
+</p>
+<p>- Module User :
+</p>
+<p>17</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>- Module Message :
+</p>
+<p>&bull; app.module.ts : c&rsquo;est le module principale de l&rsquo;application dans lequel on
+d&eacute;clare nos modules cr&eacute;es comme user et message par example
+</p>
+<p>&bull; main.ts : c&rsquo;est le fichier principale de l&rsquo;application dans le quel on importe
+le module principale , les autres modules et les configurations de l&rsquo;application
+</p>
+<p>18</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>2.2.3 Diagramme de classe
+</p>
+<p>Figure 2.1 &ndash; Diagramme de classe
+</p>
+<p>2.2.4 Module temps r&eacute;el
+La gestion d&rsquo;&eacute;v&egrave;nements asynchrones est l&rsquo;une des caract&eacute;ristiques qui
+</p>
+<p>rend le node js un environnement d&rsquo;ex&eacute;cution tr&egrave;s performant et gr&acirc;ce &agrave; cette
+approche on le consid&egrave;re comme le meilleur choix d&rsquo;une application de temps r&eacute;el
+</p>
+<p>&bull; Non blocking I/O : Une application Node JS est compos&eacute; d&rsquo;un seul thread
+en utilisant un mod&egrave;le non bloquant. Cette sp&eacute;cificit&eacute; est importante et
+impactera totalement la fa&ccedil;on de d&eacute;velopper une application sous NodeJS en
+utilisant un syst&egrave;me d&rsquo;&eacute;v&eacute;nements asynchrones.
+</p>
+<p>19</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>&bull; La gestion d&rsquo;&eacute;v&eacute;nements asynchrones propos&eacute;e par le Node JS permet de
+mettre en place des applications en temps r&eacute;el tr&egrave;s performantes comme des
+messagerie instantan&eacute;es, syst&egrave;mes de notifications, jeux en ligne . . .
+</p>
+<p>Figure 2.2 &ndash; Le mod&egrave;le non bloquant de Node JS
+</p>
+<p>2.2.5 Module traduction
+</p>
+<p>20</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>- &Eacute;tude comparative de l&rsquo;outil de traduction :
+</p>
+<p>21</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>2.3 Partie donn&eacute;es
+</p>
+<p>2.3.1 Outil de gestion
+Dans la parties de gestion de donn&eacute;es on utilisera Mongo DB qui est un
+</p>
+<p>programme de base de donn&eacute;es orient&eacute; document multiplateforme . Class&eacute; comme
+un programme de base de donn&eacute;es NoSQL , il utilise des documents de type JSON.
+</p>
+<p>2.3.2 Diagramme de base de donn&eacute;es
+</p>
+<p>Figure 2.3 &ndash; Diagramme de base de donn&eacute;es
+</p>
+<p>22</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>CHAPITRE 2. ARCHITECTURE D&Eacute;TAILL&Eacute;E
+</p>
+<p>Figure 2.4 &ndash; Example de structure de donn&eacute;es
+</p>
+<p>23</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>Conclusion
+</p>
+<p>e Dans cette &eacute;tude, on a r&eacute;ussit &agrave; impl&eacute;menter une architecture globale de
+l&rsquo;application en expliquant les diff&eacute;rents technologies utilis&eacute;es pour ce projet ,
+puis on a essayer de faire un zoom sur chaque couche de l&rsquo;application &agrave; part et
+chaque module tout seul pour mieux comprendre le d&eacute;roulement de syst&egrave;me de
+l&rsquo;application enti&egrave;re. maintenant tout est clair et il ne nous reste qu&rsquo;entamer la
+phase de d&eacute;veloppement et cette phase sera le fruit de ces trois premiers sprints :
+cahier des charges, &eacute;tude fonctionnelle et l&rsquo;&eacute;tude technique.
+</p>
+<p>24</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>Annexe
+</p>
+<p>React native
+- Les avantages d&rsquo;utilisation de react native :
+</p>
+<p>&bull; Rapidit&eacute; d&rsquo;ex&eacute;cution gr&acirc;ce au DOM virtuel (le DOM ne met &agrave; jour que le
+composant ayant besoin d&rsquo;&ecirc;tre modifi&eacute;)
+</p>
+<p>&bull; Un code propre et maintenable
+&bull; Des composants r&eacute;utilisables
+&bull; Une communaut&eacute; active
+&bull; Un seul code pour iOS et Android
+</p>
+<p>Nest JS
+- Les avantages d&rsquo;utilisation de Nest JS
+</p>
+<p>&bull; Nest JS parce que notre application se base g&eacute;n&eacute;ralement sur les &eacute;changes
+temps r&eacute;el et Node JS est recommand&eacute; pour cela et Nest JS est l&rsquo;un de ses
+Framework performants et facile &agrave; utiliser
+</p>
+<p>&bull; Non blocking I/O : Une application Node JS est compos&eacute; d&rsquo;un seul thread
+en utilisant un mod&egrave;le non bloquant. Cette sp&eacute;cificit&eacute; est importante et
+impactera totalement la fa&ccedil;on de d&eacute;velopper une application sous NodeJS en
+utilisant un syst&egrave;me d&rsquo;&eacute;v&eacute;nements asynchrones.
+</p>
+<p>&bull; La gestion d&rsquo;&eacute;v&eacute;nements asynchrones propos&eacute;e par le Node JS permet de
+mettre en place des applications real-time tr&egrave;s performantes comme des chats,
+syst&egrave;mes de notifications, jeux en ligne . . .
+</p>
+<p>&bull; La librairie NPM : NPM signifie &ldquo;Node package manager&rdquo; et est une librairie
+de modules pour l&rsquo;environnement NodeJS bas&eacute; sur le partage et la participa-
+tion de la communaut&eacute;. NPMJS regroupe plusieurs dizaines de milliers de
+modules et permet de faciliter le d&eacute;veloppement d&rsquo;une application.
+</p>
+<p>25</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>Annexe
+</p>
+<p>API REST
+- Les avantages d&rsquo;utilisation de REST :
+</p>
+<p>&bull; Un couplage plus faible entre le client et le serveur compar&eacute; aux m&eacute;thodes
+du type RPC Remote Procedure Call comme SOAP ;
+</p>
+<p>&bull; Une standardisation des APIs (Application Programming Interface) pour une
+facilit&eacute; d&rsquo;utilisation
+</p>
+<p>&bull; Une grande tol&eacute;rance &agrave; la panne
+</p>
+<p>Graphe Ql
+- Les avantages d&rsquo;utilisation de GrapheQl :
+</p>
+<p>&bull; Une acc&eacute;l&eacute;ration du d&eacute;veloppement frontend en utilisant un paradigme d&eacute;cla-
+ratif
+</p>
+<p>&bull; Un langage de requ&ecirc;te qui est : protocole, langage de programmation, client
+agnostique. GraphQL tourne sur toutes les configurations et pour tous les
+cas d&rsquo;usage.
+</p>
+<p>&bull; Plus de pr&eacute;dictibilit&eacute;. On sait &agrave; l&rsquo;avance gr&acirc;ce au contrat d&rsquo;interface ce qu&rsquo;il
+est possible de requ&ecirc;ter et de quels types de donn&eacute;es vont &ecirc;tre retourn&eacute;es.
+</p>
+<p>&bull; Plus d&rsquo;&eacute;co-conception. Il n&rsquo;y a pas d&rsquo;exc&egrave;s de donn&eacute;es et plusieurs requ&ecirc;tes
+peuvent &ecirc;tre regroup&eacute;es dans un seul appel HTTP par exemple, ce qui permet
+une r&eacute;duction des charges r&eacute;seaux.
+</p>
+<p>Socket.io
+Socket.IO est une biblioth&egrave;que JavaScript pour les applications Web en temps
+</p>
+<p>r&eacute;el. Il permet une communication bidirectionnelle en temps r&eacute;el entre les clients
+Web et les serveurs. Il se compose de deux parties : une biblioth&egrave;que c&ocirc;t&eacute; client
+qui s&rsquo;ex&eacute;cute dans le navigateur et une biblioth&egrave;que c&ocirc;t&eacute; serveur pour Node.js. Les
+deux composants ont une API presque identique.
+</p>
+<p>&bull; WebSocket facilite la communication en temps r&eacute;el entre le client et le serveur
+Web.
+</p>
+<p>&bull; Ce protocole aide &agrave; se transformer en multiplateforme dans un monde en
+temps r&eacute;el entre le serveur et le client.
+</p>
+<p>&bull; L&rsquo;avantage majeur qu&rsquo;il repr&eacute;sente par rapport &agrave; une connexion HTTP est
+qu&rsquo;il permet une communication full duplex
+</p>
+<p>26</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>Annexe
+</p>
+<p>- Les avantages de l&rsquo;outil Expo :
+&bull; On n&rsquo;a pas besoin d&rsquo;&eacute;crire ou de configurer un code natif pour un code
+</p>
+<p>enti&egrave;rement fonctionnel et pr&ecirc;t pour la production.
+&bull; Possibilit&eacute; de production, mises &agrave; jour "on the fly", sans publier de nouveau
+</p>
+<p>l&rsquo;application sur app store ou bien play store.
+&bull; Il y a une tr&egrave;s riche biblioth&egrave;que de fonctions / composants unifi&eacute;s (AR,
+</p>
+<p>int&eacute;gration de Google et Facebook, s&eacute;lecteurs de date / heure, etc.)
+&bull; G&eacute;n&eacute;ration simplifi&eacute;e de paquets binaires
+</p>
+<p>- Les inconv&eacute;nients de l&rsquo;outil Expo :
+&bull; Si certains aspects de l&rsquo;API native ne sont pas couverts, nous ne pouvons pas
+</p>
+<p>les utiliser.
+&bull; Impossible de joindre du code natif personnalis&eacute;
+&bull; Nous devons installer l&rsquo;application client Expo sur le p&eacute;riph&eacute;rique mobile des
+</p>
+<p>testeurs.
+&bull; Les binaires finaux sont assez lourds (min 20-30 Mo suite au SDK d&rsquo;expo)
+&bull; Les biblioth&egrave;ques externes qui demandent un &laquo; link &raquo; ne fonctionnent pas
+</p>
+<p>avec expo
+</p>
+<p>- Le concept des PROPS :
+La plupart des composants en React peuvent &ecirc;tre personnalis&eacute;s lors de leur
+</p>
+<p>cr&eacute;ation, avec diff&eacute;rents param&egrave;tres. Ces param&egrave;tres de cr&eacute;ation sont appel&eacute;s props,
+abr&eacute;viation de propri&eacute;t&eacute;s.
+</p>
+<p>Par exemple, un composant React Native de base est le "Image". Lorsque
+nous cr&eacute;ons une image, nous pouvons utiliser un accessoire nomm&eacute; "source" pour
+contr&ocirc;ler l&rsquo;image qu&rsquo;elle affiche.
+</p>
+<p>Remarquons les accolades qui l&rsquo;entourent pic- elles int&egrave;grent la variable picdans
+JSX. on peur mettre n&rsquo;importe quelle expression JavaScript entre accolades dans
+JSX.
+</p>
+<p>nos propres composants peuvent &eacute;galement &ecirc;tre utilis&eacute;s props. Cela nous permet
+de cr&eacute;er un seul composant utilis&eacute; &agrave; de nombreux endroits diff&eacute;rents dans notre
+application.
+</p>
+<p>27</p>
+<p/>
+</div>
+<div class="page"><p/>
+<p>Annexe
+</p>
+<p>- Le concept de State :
+Il existe deux types de donn&eacute;es qui contr&ocirc;lent un composant : "props" et
+</p>
+<p>"state".
+props sont d&eacute;finis par le parent et ils sont fixes pendant toute la dur&eacute;e de vie d&rsquo;un
+composant. Pour les donn&eacute;es qui vont changer, nous devons utiliser state.
+</p>
+<p>En g&eacute;n&eacute;ral, on doit initialiser state dans le constructeur, puis appeler setState
+lorsque on souhaite le modifier.
+</p>
+<p>React-navigation :
+&bull; StackNavigator : c&rsquo;est la navigation la plus basique o&ugrave; on pousse une vue
+</p>
+<p>sur iOS et pr&eacute;sente une vue sur Android. Le StackNavigator g&egrave;re une pile de
+vues qui augmente lorsque vous naviguez vers une nouvelle vue et diminue
+lorsque vous revenez en arri&egrave;re.
+</p>
+<p>&bull; TabNavigator : permet de cr&eacute;er une barre d&rsquo;onglets, en haut ou en bas, de
+votre application. On utilisera ce type de navigation lorsque l&rsquo;on voudra
+couper notre application en plusieurs onglets.
+</p>
+<p>&bull; DrawerNavigator : permet de cr&eacute;er un menu dit "hamburger", &agrave; gauche de
+nos vues, avec une liste d&rsquo;entr&eacute;es pour chacune de nos vues.
+</p>
+<p>Les sp&eacute;cificit&eacute;s techniques de RN :
+&bull; Les composants , qui sont les principaux &eacute;l&eacute;ments constitutifs d&rsquo;une appli-
+</p>
+<p>cation, sont traduits en vues mobiles natives : UIView sur iOS ou View sur
+Android et non pas des webViews comme les autres frameworks qui utilisent
+JS
+</p>
+<p>&bull; Fondamentalement, dans les applications RN, le code peut &ecirc;tre divis&eacute; en
+deux mondes : JS et Native. On peut appeler du code natif depuis JS . React
+Native , via Bridge , expose les interfaces JS &agrave; l&rsquo;API de la plateforme native.
+Cela signifie que l&rsquo;application peut utiliser des fonctionnalit&eacute;s natives , telles
+que l&rsquo;appareil photo, Bluetooth et GPS .
+</p>
+<p>&bull; Le code dans chacun de ces mondes JS et natifs s&rsquo;ex&eacute;cute assez rapidement
+, mais il existe parfois un besoin de communication entre eux , ce qui est
+malheureusement lent. Le pont fonctionne comme un traducteur entre les
+deux mondes.
+</p>
+<p>28</p>
+<p/>
+</div>
+<ul>	<li>Table des figures</li>
+	<li> Architecture Globale </li>
+	<li> Architecture d&eacute;taill&eacute;e </li>
+<ul>	<li> Partie client </li>
+<ul>	<li> Architecture int&eacute;rieur React Native</li>
+	<li> Structure D&eacute;taill&eacute;e de la partie front </li>
+</ul>
+	<li>Partie serveur</li>
+<ul>	<li> Architecture int&eacute;rieur Nest js </li>
+	<li> Structure D&eacute;taill&eacute;e de la partie back </li>
+	<li>Diagramme de classe</li>
+	<li>Module temps r&eacute;el</li>
+	<li>Module traduction</li>
+</ul>
+	<li>Partie donn&eacute;es</li>
+<ul>	<li>Outil de gestion</li>
+	<li>Diagramme de base de donn&eacute;es</li>
+</ul>
+</ul>
+</ul>
+</body></html>
